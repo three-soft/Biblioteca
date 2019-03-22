@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="plantillaPrincipal.xhtml">
+
+        <ui:define name="titulo">Registro Administrador</ui:define>
+        <ui:define name="contenido">
+            <center>
+                <h:body>
+                    <h:form id ="formulario">
+
+                        <h:panelGrid columns= "2" cellpadding="5"  >
+
+                            <h:outputLabel for="Nombre" value="Nombre:"  />
+                            <p:inputText id="nombre" required="true" requiredMessage="Rellenar campo" value="#{administradorController.administrador.nombre}" />
+
+                            <h:outputLabel for="Contraseña" value="Contraseña:" style="font-weight:bold" />
+                            <p:inputText id="contraseña"  required="true" value="#{administradorController.administrador.contrasena}" />
+
+                            <h:outputLabel for="Correo" value="Correo:" style="font-weight:bold" />
+                            <p:inputText id="correo" required="true" value="#{administradorController.administrador.correo}" />
+
+                            <h:outputLabel for="numTrabajador" value="Numero de trabajador:" style="font-weight:bold" />
+                            <p:inputText id="numTrabajador" required="true" value="#{administradorController.administrador.numTrabajador}" />
+
+                        </h:panelGrid> 
+                        <p:commandButton value="Registrar" action="#{administradorController.registra()}"/>
+
+                    </h:form>
+
+                </h:body>
+            </center>
+        </ui:define>
+    </ui:composition>
+
+</html>
