@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2/04/2019, 12:06:31 PM
+    Author     : damianri
+*/
+.container{
+    min-width: 600px;
+}
+
+
+h3{
+    background-color: #0e253d;
+    padding: 10px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.ui-button{
+    padding: 10px;
+    font-family: sans-serif;
+    box-shadow: none;
+}
+
+#enlace-registro{
+    padding: 10px;
+}
+
+.form-group{
+    padding: 10px 10px;
+}
+label{
+    padding-top: 5px;
+}
+
+
+.ui-inputfield, .ui-widget-content .ui-inputfield, .ui-widget-header .ui-inputfield{
+    box-shadow: none;
+}
+
+#a-registro{
+    background-color: #eb5160;
+    border-radius: 3px;
+    padding: 0px 10px;
+    color: white;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+#a-registro:hover{
+    opacity: 1;
+    text-decoration: none;
+}

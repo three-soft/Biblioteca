@@ -6,57 +6,21 @@
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
                 xmlns:f="http://xmlns.jcp.org/jsf/core">
-    
-    <div id="encabezado">
-        <a href="http://www.unam.mx/">
-            <h:graphicImage library="img" width="555" height="103" name="barra-1.gif"/>
-            <h:graphicImage library="img" width="555" height="103" name="barra-2.jpg"/>
-        </a>
+    <ui:define name="head">
+        <title>Bienvenido</title>
+    </ui:define>
+    <div id="encabezado" class="row">
+
+        <div class="col">
+            <img id="logo-unam" src="#{resource['img/logo_unam-blanco.png']}" />
+        </div>
+        <div class="col-6">
+            Gestor de Espacios Culturales    
+        </div>
+        <div class="col">
+            <img  id="logo-ciencias" src="#{resource['img/ciencias-blanco.png']}" />
+        </div>
+
     </div>
-    <nav class="navbar navbar-expand-md" style="background-color: #D2A911;">
-        <!-- Parte izquierda de la barra -->    
-        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <!-- Imagen -->
-                    <a class="navbar-brand" href="index.xhtml">
-                        <h:graphicImage 
-                                        library="img" 
-                                        width="30px" 
-                                        name="logo.png" />
-                    </a> 
-                </li>
-                <li class="nav-item">
-                    <h:form>
-                        <h:commandLink class="navbar-brand"
-                            style="color: white"
-                            action="/index"
-                            value="Inicio">
-                        </h:commandLink>
-                    </h:form>
-                </li>
-                <li class="nav-item">
-                    <h:form>
-                        <h:commandLink class="navbar-brand"
-                            style="color: white"
-                            action="/registro"
-                            value="Registro">
-                        </h:commandLink>
-                    </h:form>
-                </li>
-                
-            </ul>
-        </div>
 
-        <!-- Parte central de la barra -->      
-        <div class="mx-auto order-0">
-        </div>
-
-        <!-- Parte derecha de la barra -->  
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-            </ul>
-        </div>
-    </nav>
-    
 </ui:composition>

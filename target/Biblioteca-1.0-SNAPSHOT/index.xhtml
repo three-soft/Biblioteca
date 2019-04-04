@@ -7,17 +7,37 @@
 
     <ui:define name="contenido">
         <div class="jumbotron">
-          <div class="container">
-            <h:form>
-                <h:outputLabel for="Correo" value="Correo:" />  
-                <p:inputText id="Correo" value="#{loginController.correo}" required="true" label="Correo" requiredMessage="Campo requerido"/>
-                <br></br>
-                <h:outputLabel for="Contraseña" value="Contraseña:" />
-                <p:inputText type="password" id="Contraseña" value="#{loginController.contra}" required="true" label="Contraseña" requiredMessage="Campo requerido"/>
-                <br></br>
-                <p:commandButton  value="Iniciar sesión" action="#{loginController.login()}" />                  
-            </h:form>
-          </div>
+            <div class="container">
+                <h:form>
+                    <div>
+                        <p:messages for="messages" closable="true"/>
+                    </div>
+                    <h3>Iniciar Sesión</h3>
+                    <div class="form-group">
+
+                        <label for="correo">Username o Correo:</label>
+                        <p:inputText class="form-control"  placeholder="correo@ciencias.unam.mx" required="true" id="userName" size="10"
+                                     requiredMessage="Debe ingresar un usuario o correo"
+                                     value="#{loginController.correo}">
+                        </p:inputText>
+                        <small id="nota" class="form-text text-muted">Acceso únicamente con correo de ciencias</small>
+                        <label for="contraseña">Contraseña:</label>
+
+                        <p:password class="form-control"  placeholder="Contraseña" required="true" 
+                                    requiredMessage="Debe ingresar su contraseña" id="password" size="10"
+                                    value="#{loginController.contra}">
+                        </p:password>
+                    </div>
+                    <p:commandButton action="#{loginController.login()}" ajax="false" id="btn-iniciar-sesion"
+                                     class="btn btn-outline-info btn-block" value="Ingresar" update="form">
+                    </p:commandButton>
+
+                </h:form>
+                <div id="enlace-registro">
+                    Crear Cuenta <a id="a-registro" href="registro.xhtml"> Registrate </a>
+                </div>
+
+            </div>
         </div>
     </ui:define>
 

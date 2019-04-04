@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2/04/2019, 11:12:27 AM
+    Author     : damianri
+*/
+
+#encabezado{
+    height: 150px;
+    background-color: #235086;
+    font-size: 2em;
+    min-width: 700px;
+    text-align: center;
+    color: white;
+}
+
+.col-6{
+    margin: 0;
+    position: absolute;
+    top: 25%;
+}
+
+#logo-unam{
+    height: 150px;
+}
+
+#encabezado #logo-ciencias{
+    height: 140px;
+    display: inline-block;
+}
